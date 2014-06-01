@@ -1,0 +1,30 @@
+<head>
+  <title>chinesequiz</title>
+</head>
+
+<body>
+	{{> loginButtons}}
+
+  {{> characters}}
+
+   {{> nextbutton}}
+</body>
+
+<template name="characters">
+	{{#each character}}
+		<div class="character">
+			{{simplified}}
+			<br>
+			<span class="definition">{{definition}}</span><br>
+			<input class="answer" placeholder="What does this character mean?">
+		</div>
+	{{/each}}
+</template>
+
+<template name="nextbutton">
+	{{#if showNextButton}}
+ 		<button>
+			Show me the next one!
+		</button>
+	{{/if}}
+</template>
